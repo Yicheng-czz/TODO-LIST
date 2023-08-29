@@ -1,0 +1,39 @@
+.table-view *.column-header-background { /* FX theme stylesheet */
+    -fx-background-color: #f2f2f2;
+    -fx-background-insets: 0px, 0px;
+}
+
+.table-row-cell{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+
+.table-row-cell:selected {
+    -fx-text-fill: white; /* 选中行文本颜色 */
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-border-color: transparent; /* 隐藏单元格之间的边框 */
+    -fx-border-width: 0; /* 边框宽度设置为0 */
+}
+
+
+.table-view .scroll-bar:vertical{
+    -fx-background-color: #f2f2f2;
+}
+
+.table-view .scroll-bar:horizontal{
+    -fx-background-color: #f2f2f2;
+}
+
+.table-column{
+    -fx-padding:0;
+}
+
+.table-column .label{
+    -fx-background-color: #f2f2f2;
+    -fx-text-fill: black ;
+    -fx-text-alignment: center ;
+    -fx-graphic-text-gap:0;
+}

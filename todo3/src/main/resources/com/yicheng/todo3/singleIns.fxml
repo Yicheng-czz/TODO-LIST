@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="104.0" prefWidth="323.0" xmlns="http://javafx.com/javafx/18.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="14.0" layoutY="21.0" prefHeight="65.0" prefWidth="123.0" styleClass="h3">
+         <children>
+            <Label alignment="CENTER" prefHeight="65.0" prefWidth="123.0" styleClass="lbl, lbl-danger" text="WARNING" />
+         </children>
+      </Pane>
+      <Pane layoutX="147.0" layoutY="14.0" prefHeight="65.0" prefWidth="169.0" styleClass="h6">
+         <children>
+            <Label alignment="CENTER" prefHeight="65.0" prefWidth="169.0" text="An instance already exists" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

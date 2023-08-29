@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yicheng.todo3.mainWindow.Todo3Controller">
+   <children>
+      <MenuBar fx:id="menuBarId" stylesheets="@../../../css/menubar.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Configuration">
+            <items>
+              <MenuItem fx:id="appearanceId" mnemonicParsing="false" onAction="#appearanceClicked" style="-fx-font-size: 12px;" text="Settings" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="tutorialId" mnemonicParsing="false" onAction="#tutorialId" style="-fx-font-size: 12px;" text="Tutorial" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="About">
+               <items>
+                  <MenuItem fx:id="authorId" mnemonicParsing="false" onAction="#authorIdClicked" style="-fx-font-size: 12px;" text="Author" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Pane prefHeight="43.0" prefWidth="800.0" styleClass="h3">
+         <children>
+            <Label alignment="CENTER" prefHeight="25.0" prefWidth="800.0" style="-fx-background-color: #337ab7; -fx-text-fill: black; -fx-border-width: 1; -fx-border-color: #337ab7; -fx-border-radius: 0;" styleClass="lbl, lbl-info" text="Faites-le !" textAlignment="CENTER" />
+         </children>
+      </Pane>
+      <ToolBar prefHeight="9.0" prefWidth="800.0" style="-fx-background-color: #f2f2f2; -fx-border-width: 1; -fx-border-color: lightgray;">
+         <items>
+            <ToggleButton fx:id="toggleBtnId" mnemonicParsing="false" onMouseClicked="#toggleHandle" stylesheets="@../../../css/toggleBtn.css" text="show finished tasks" />
+         </items>
+      </ToolBar>
+
+      <TableView fx:id="tableId" fixedCellSize="30.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="494.0" prefWidth="862.0" style="-fx-background-color: #f2f2f2;" stylesheets="@../../../css/tableview.css">
+        <columns>
+            <TableColumn maxWidth="110.0" minWidth="73.60000383853912" prefWidth="78.39999163150787" resizable="false" text="TaskID">
+               <cellValueFactory>
+                  <PropertyValueFactory property="taskID" />
+               </cellValueFactory>
+            </TableColumn>
+          <TableColumn maxWidth="227.9999771118164" minWidth="110.0" prefWidth="223.19998931884766" resizable="false" text="Task">
+                  <cellValueFactory>
+                  <PropertyValueFactory property="task" />
+               </cellValueFactory>
+          </TableColumn>
+          <TableColumn maxWidth="172.79998779296875" minWidth="82.4000244140625" prefWidth="172.0" resizable="false" text="Day">
+              <cellValueFactory>
+                  <PropertyValueFactory property="day" />
+               </cellValueFactory>
+          </TableColumn>
+            <TableColumn maxWidth="159.99996948242188" minWidth="43.999969482421875" prefWidth="159.99996948242188" resizable="false" text="Time">
+                <cellValueFactory>
+                  <PropertyValueFactory property="time" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn maxWidth="195.99993896484375" minWidth="26.39996337890625" prefWidth="183.99993896484375" resizable="false" text="Deadline">
+                <cellValueFactory>
+                  <PropertyValueFactory property="deadline" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn maxWidth="160.0" minWidth="100.0" prefWidth="250.0" resizable="false" text="Course">
+                <cellValueFactory>
+                  <PropertyValueFactory property="course" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn maxWidth="600.0" minWidth="220.0" prefWidth="300.0" resizable="false" text="Task Description">
+                <cellValueFactory>
+                  <PropertyValueFactory property="taskDescription" />
+               </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+
+       <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="600.0" spacing="5.0" style="-fx-background-color: #f2f2f2;">
+         <children>
+            <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addBtnClicked" prefHeight="23.0" prefWidth="40.0" text="add">
+                    <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                    </styleClass>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

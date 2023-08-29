@@ -1,0 +1,16 @@
+.menu-bar{
+    -fx-background-color: #f2f2f2;
+    -fx-border-color:  #f2f2f2;
+    -fx-border-width: 0
+}
+
+.menu-bar .label {
+    -fx-font-size: 13 pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+}
+
+.menu-item .label{
+    -fx-font-size: 10 pt;
+    -fx-label-line-length: 20;
+}
